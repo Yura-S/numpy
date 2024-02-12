@@ -3,13 +3,13 @@ import numpy as np
 ############################################################################################################################
 ######################################################SHAPE OF ARRAY(HOW MANY ELEMENTS GAVE EVERY DIMENSION) - ARRAY SIZE
 arr1 = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
-# print(arr1.shape)
+print(arr1.shape)
 
 ######################################################ARRAY CAN BE RESHAPED TO OTHER ARRAY(IF THERE RIGHT ELEMTS COUNT)
 arr2 = arr1.reshape(2, 2, 2)
 arr3 = arr1.reshape(-1)
-# print(arr2)
-# print(arr3)
+print(arr2)
+print(arr3)
 
 ######################################################ITERATING(GOING THROUGHT ELEMENTS ONE BY ONE)
 arr4 = np.array([5, 15, 25, 35, 45])
@@ -22,3 +22,27 @@ for i in arr5:
         print(j)
 
 ######################################################ITERATING BY nditer()
+arr6 = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+for i in np.nditer(arr6):
+  print(i)
+
+######################################################ITERATING WITH STEPS
+arr7 = np.array([[11, 22, 33, 44], [55, 66, 77, 88]])
+
+for i in np.nditer(arr7[:, ::2]):
+  print(i)
+
+######################################################ITERATE ARRAY WITH DIFFERENT DATA TYPES
+arr8 = np.array([46, 2, 2943])
+
+for i in np.nditer(arr8, flags=['buffered'], op_dtypes=['S']):
+  print(i)  
+
+######################################################ENUMERED ITERATION
+arr9 = np.array([15, 25, 35])
+
+for idx, i in np.ndenumerate(arr9):
+  print(idx, i)
+
+######################################################JOINING ARRAYS  
