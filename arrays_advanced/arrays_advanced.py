@@ -45,4 +45,26 @@ arr9 = np.array([15, 25, 35])
 for idx, i in np.ndenumerate(arr9):
   print(idx, i)
 
-######################################################JOINING ARRAYS  
+######################################################JOINING ARRAYS
+arr10 = np.array([1, 2, 3])
+arr11 = np.array([4, 5, 6])
+arr12 = np.concatenate((arr10, arr11))
+print(arr12)
+
+######################################################JOIN ARRAYS AS ROWS(hstack)
+arr13 = np.array([111, 222, 333])
+arr14 = np.array([444, 555, 666])
+arr15 = np.vstack((arr13, arr14))
+print(arr15)
+
+######################################################JOIN ARRAYS AS COLUMNS(vstack)
+arr16 = np.array([1, 2, 3])
+arr17 = np.array([4, 5, 6])
+arr18 = np.vstack((arr16, arr17))
+print(arr18)
+
+######################################################JOIN ARRAYS AS HEIGHT(dstack)
+arr19 = np.array([111, 222, 333])
+arr20 = np.array([444, 555, 666])
+arr21 = np.dstack((arr19, arr20))
+print(arr21)
