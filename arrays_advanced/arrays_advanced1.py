@@ -24,7 +24,7 @@ arr6 = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 x = np.where(arr6%2 == 0)
 print(x)
 
-######################################################SORTING ARRAY(WORKING WITH ALL DATA TYPESS)
+######################################################SORTING ARRAY(WORKS WITH ALL DATA TYPESS)
 arr7 = np.array([3, 2, 0, 1])
 print(np.sort(arr7))
 
